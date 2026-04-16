@@ -2,13 +2,12 @@
   "name": "cc-patches",
   "version": "0.1.0",
   "description": "Runtime patches for minified Claude Code bundles",
-  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit",
-    "test": "node --test --experimental-strip-types 'src/**/*.test.ts'"
+    "eval": "tsc && node dist/jailbreak/cli.js"
   },
   "devDependencies": {
     "typescript": "^5.4.0",
