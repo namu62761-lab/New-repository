@@ -7,7 +7,7 @@ This document provides comprehensive guidelines for AI assistants working in thi
 **Repository Name:** New-repository  
 **Status:** Newly initialized  
 **Primary Branch:** (To be determined based on project)  
-**Development Branch:** `claude/add-claude-documentation-8lBGa`
+**Development Branch:** `claude/fix-branch-naming-txEci`
 
 ### Project Description
 *[Update this section with your specific project details]*
@@ -61,11 +61,22 @@ This document provides comprehensive guidelines for AI assistants working in thi
 ### 1. Branch Management
 
 **Naming Convention:**
+
+Branch prefixes align 1:1 with commit/PR types so a branch's purpose is obvious from its name alone. Use lowercase, kebab-case slugs after the prefix.
+
 - Feature branches: `feature/<name>` (e.g., `feature/user-auth`)
 - Bug fixes: `fix/<name>` (e.g., `fix/login-redirect`)
 - Documentation: `docs/<name>` (e.g., `docs/api-guide`)
+- Refactors: `refactor/<name>` (e.g., `refactor/extract-auth-service`)
+- Tests: `test/<name>` (e.g., `test/user-manager-coverage`)
 - Chores: `chore/<name>` (e.g., `chore/update-deps`)
 - Claude-generated: `claude/<task>-<id>` (e.g., `claude/add-tests-abc123`)
+
+**Rules:**
+- Prefix is required and must be one of the types above.
+- Slug must be lowercase, kebab-case, and descriptive (no `fix/stuff`, no `feature/wip`).
+- Keep the full branch name under 60 characters where possible.
+- One concern per branch — don't mix a refactor with a feature.
 
 **Primary Development Branch:** `main` or `develop` (to be set)
 
